@@ -1,0 +1,45 @@
+.colour1 {
+  background-color: #fe019a;
+}
+.colour2 {
+  background-color: #cfff04;
+}
+.colour3 {
+  background-color: #4efd54;
+}
+.colour4 {
+  background-color: #ff9933;
+}
+.colour5 {
+  background-color: lightsteelblue;
+}
+.contentColour1 {
+  color: #fe019a;
+}
+.contentColour2 {
+  color: #cfff04;
+}
+.contentColour3 {
+  color: #4efd54;
+}
+.contentColour4 {
+  color: #ff9933;
+}
+.contentColour5 {
+  color: lightsteelblue;
+}
+.underlineColour1 {
+  border-bottom: 4px solid #fe019a;
+}
+.underlineColour2 {
+  border-bottom: 4px solid #cfff04;
+}
+.underlineColour3 {
+  border-bottom: 4px solid #4efd54;
+}
+.underlineColour4 {
+  border-bottom: 4px solid #ff9933;
+}
+.underlineColour5 {
+  border-bottom: 4px solid lightsteelblue;
+}
