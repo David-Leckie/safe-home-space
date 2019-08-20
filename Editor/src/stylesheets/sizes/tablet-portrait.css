@@ -1,0 +1,34 @@
+.search  {
+margin: 6% 0 0 8vw;
+width: 70px;
+}
+.clear  {
+margin: 6% 0 0 1vw;
+width: 70px;
+}
+#URLBox  {
+left: 15%;
+width: 70vw;
+top: 240px
+}
+#mainEditBox  {
+left: 8%;
+width: 84%;
+top: 395px;
+}
+#textBoxDescription  {
+width: 98%;
+height: 115px;
+margin: 0 0 0 1%;
+}
+#textBoxKeywords  {
+width: 98%;
+height: 95px;
+margin: 0 0 0 1%;
+}
+#mainEditBoxLower  {
+left: 8%;
+width: 84%;
+top: 875px;
+}
+
