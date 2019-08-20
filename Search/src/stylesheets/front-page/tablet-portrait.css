@@ -1,0 +1,68 @@
+.subCategoriesPopUpMenu {   
+bottom: 36px;
+width: 160px;
+margin: 0 0 0 -80px; 
+}
+.subCategoryPopUpMenuItem {
+height: 46px;
+font-size: 18px;
+}
+.button {
+width: 115px;
+height: 46px;
+font-size: 18px;
+}
+.wide {
+width: 135px; 
+}
+.heading1Size {
+font-size: 40px;
+}
+#addMySiteButton {
+right: 80px;
+}
+#safeLogo {
+top: 145px;
+}
+#title {
+top: 285px;
+}
+#searchBoxWrapper {
+width: 80%;
+top: 405px;
+height: 50px;
+margin: 0 0 0 -40%;
+}
+#searchButton {
+width: 87px;
+height: 44px; 
+font-size: 16px;
+}
+#searchBox {
+left: 93px;
+width: 80%;
+height: 44px;
+font-size: 16px; 
+}
+#categoryButtonsWrapper {
+top: 530px;
+width: 440px;
+margin: 0 0 0 -220px;
+}
+#learnButton {
+left: 5px;
+}
+#workButton {
+margin: 0 0 0 -57px;
+}
+#playButton {
+right: 5px;
+}
+#connectButton {
+left: 64px;
+top: 100px;
+}
+#tradeButton {
+right: 64px;
+top: 100px;
+}

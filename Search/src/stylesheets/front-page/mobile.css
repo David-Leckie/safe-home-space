@@ -1,0 +1,31 @@
+#safeLogo {
+top: 105px;
+}
+#title {
+top: 250px;
+}
+#searchBoxWrapper {
+top: 355px;
+width: 90%;
+margin: 0 0 0 -45%;
+}
+#searchBox {
+width: 73%; 
+}
+#categoryButtonsWrapper {
+top: 460px;
+width: 334px; 
+margin: 0 0 0 -167px;
+}
+#learnButton {
+left: 18px;
+}
+#playButton {
+right: 18px;
+}
+#connectButton {
+left: 55px;
+}
+#tradeButton {
+right: 55px;
+}

@@ -1,0 +1,56 @@
+.subCategoriesPopUpMenu {   
+bottom: 40px;
+width: 200px;
+margin: 0 0 0 -100px; 
+}
+.subCategoryPopUpMenuItem {
+height: 50px;
+font-size: 20px;
+}
+.button {
+width: 150px;
+height: 50px;
+font-size: 20px;
+}
+.wide {
+width: 150px; 
+}
+.heading1Size {
+font-size: 42px;
+}
+#safeLogo {
+top: 120px;
+margin-left: -65px;
+width: 130px;
+height: 130px;
+background-size: 130px 130px;
+} 
+#title {
+top: 280px;
+}
+#searchBoxWrapper {
+top: 395px;
+}
+#searchButton {
+width: 127px;
+font-size: 20px;
+}
+#searchBox {
+left: 133px;
+width: 82%;
+font-size: 20px; 
+}
+#categoryButtonsWrapper {
+top: 520px;
+width: 560px;
+margin: 0 0 0 -280px;
+}
+#workButton {
+margin: 0 0 0 -75px;
+}
+#connectButton {
+top: 105px;
+}
+#tradeButton {
+top: 105px;
+}
