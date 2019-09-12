@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+a:link {
+  color: inherit; 
+}
+#mainDiv {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* OPTIMISED FOR DESKTOP SCREENS ONLY*/
+
+
+#homeIcon {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 14px;
+}
+#midLogo {
+  box-sizing: border-box;
+  position: absolute;
+  left: 15%;
+  top: 10vh;
+  background-image: url('../assets/safenetwork-icon-pink.png');
+  width: 13vh;
+  height: 13vh;
+  background-size: 13vh 13vh;
+}
+#bigLogo {
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  margin-left: -11.5vh;
+  top: 11vh;
+  background-image: url('../assets/safenetwork-icon-pink.png');
+  width: 23vh;
+  height: 23vh;
+  background-size: 23vh 23vh;
+}
+#bigSafe {
+  box-sizing: border-box;
+  position: absolute;
+  text-align: center;
+  top: 39vh;
+  width: 350px;
+  left: 50%;
+  margin-left: -175px;
+}
+.pink {
+  background-color: #fe019a;
+}
+.yellow {
+  background-color: #cfff04;
+}
+.green {
+  background-color: #4efd54;
+}
+.orange {
+  background-color: #ff9933;
+}
+.contentPink {
+  color: #fe019a;
+}
+.contentYellow {
+  color: #cfff04;
+}
+.contentGreen {
+  color: #4efd54;
+}
+.contentOrange {
+  color: #ff9933;
+}
+.underlinePink {
+  border-bottom: 4px solid #fe019a;
+}
+.underlineYellow {
+  border-bottom: 4px solid #cfff04;
+}
+.underlineGreen {
+  border-bottom: 4px solid #4efd54;
+}
+.underlineOrange {
+  border-bottom: 4px solid #ff9933;
+}
+
+
+#titleBox {
+  box-sizing: border-box;
+  padding: 3.2vh;
+  padding-left: 12vh;
+  border-style: none none solid none;
+  border-width: 3px;
+  border-color: black;
+  width: 45%;
+  height: 12%;
+  position:relative;
+}
+#safeIcon {
+  height: 7vh;
+  width: 7vh;
+  top: 2vh;
+  left: 3vh;
+  position: absolute;
+  border-style: none;
+  background-image: url('../assets/safenetwork-icon-pink.png');
+  background-size: 7vh 7vh;
+  z-index: 1;
+}
+#subTitleBox {
+  box-sizing: border-box;
+  padding: 2vh;
+  padding-left: 4vh;
+  border-style: none solid solid none;
+  width: 25%;
+  height: 8%;
+  top: 12%;
+  position:absolute;
+}
+#savedBox {
+  box-sizing: border-box;
+  padding: 2.5vh;
+  padding-right: 1vh;
+  border-style: none none none none;
+  left: 25%;
+  width: 20%;
+  height: 8%;
+  top: 12%;
+  position: absolute;
+  text-align: right;
+}
+#savedMessage {
+  visibility: hidden;
+  display: inline;
+  border: 2px solid black;
+  padding: 1vh 1vw;
+  text-align: center;
+  font-size: 16px;
+  background-color: #4efd54;
+}
+#savedMessage.show {
+  visibility: visible;
+}
+#mainEditBox {
+  box-sizing: border-box;
+  padding: 2vh;
+  padding-top: 1vh;
+  border-style: none none solid none;
+  width: 45%;
+  height: 88%;
+  top: 12%;
+  position:absolute;
+}
+.editItem {
+  box-sizing: border-box;
+  padding: 1vh;
+  position: relative;
+}
+.textBoxInput {
+  position: relative;
+  padding: 3px;
+  padding-left: 5px;
+  font-family: Courier;
+  font-size: 15px;
+  height: 27px;
+  border: 2px solid black;
+}
+.menuInput {
+  position: relative;
+  font-family: Courier;
+  font-size: 15px;
+  width: 140px;
+  height: 25px;
+  border: 2px solid black;
+}
+#categorySelBoxes {
+  position: relative;
+  top: 1px;
+}
+#category2SelBoxes {
+  position: absolute;
+  left: 18vw;
+  top: 1px;
+  
+}
+#verifiedBox {
+  position: absolute;
+  left: 36.5vw;
+  top: 30px;
+}
+#requestRemoveBox {
+  position: absolute;
+  left: 36.5vw;
+  top: 100px;
+}
+#editButtonsBox {
+  box-sizing: border-box;
+  padding: 2vh;
+  padding-top: 2vh;
+  padding-left: 4vw;
+  width: 65%;
+  height: 13%;
+  bottom: 0;
+  left: 0;
+  position:absolute;
+}
+#clearBox {
+  box-sizing: border-box;
+  padding: 2vh;
+  padding-top: 2vh;
+  padding-left: 1vw;
+  width: 35%;
+  height: 13%;
+  bottom: 0;
+  left: 65%;
+  position: absolute;
+}
+#bottomLeftBox {
+  box-sizing: border-box;
+  padding: 0vh;
+  border-style: solid none solid none;
+  width: 45%;
+  height: 2%;
+  position:absolute;
+  top: 98%;
+}
+#filterBox {
+  box-sizing: border-box;
+  padding: 2vh;
+  padding-left: 2.4vh;
+  border-style: none solid solid solid;
+  width: 35%;
+  height: 18%;
+  position:absolute;
+  top: 0%;
+  left:45%;
+}
+.filterCategoryBox {
+  box-sizing: border-box;
+  padding: 0;
+  position:absolute;
+}
+#topRightBox {
+  box-sizing: border-box;
+  padding: 2vh;
+  border-style: none none none none;
+  width: 20%;
+  height: 8%;
+  position:absolute;
+  top: 0%;
+  left:80%;
+}
+#savedMessage2 {
+  box-sizing: border-box;
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  z-index: 1;
+  top: 8.5vh;
+  right: 0;
+}
+#savedMessage2.show {
+  visibility: visible;
+}
+#mailIcon {
+  border: none;
+  display: block;
+  position: absolute;
+  right: 65px; 
+  z-index: 1;
+}
+.mailDropdown {
+  display: block;
+  background-color: white;
+  border-style: solid solid solid solid;
+  width: 34vw;
+  margin-top: 1vh;
+  padding: 1.5vw;
+  border-width: 3px;
+  border-color: black;
+  z-index: 1;
+  position: absolute;
+  right: -60px;
+}
+.mailItem {
+  padding: 4vh;
+  margin: 1vh;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+#settingsIcon {
+  display: block;
+  position: absolute;
+  right: 20px;
+}
+.settingsDropdown {
+  display: block;
+  background-color: white;
+  border-style: solid solid solid solid;
+  margin-top: 1vh;
+  border-width: 3px;
+  border-color: black;
+  z-index: 1;
+  position: absolute;
+  right: -20px;
+}
+.settingsItem {
+  padding: 1vh;
+  padding-top: 0;
+  margin: 1vh;
+  font-size: 18px;
+  position: relative;
+  width: 180px;
+  height: 85px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+#sortBox {
+  box-sizing: border-box;
+  padding: 2vh;
+  padding-left: 1vw;
+  border-style: solid solid solid none;
+  width: 20%;
+  height: 10%;
+  position: absolute;
+  top: 8%;
+  left: 80%;
+}
+#sortBox2 {
+  box-sizing: border-box;
+  border-width: 4px;
+  background-color: white;
+  width: 170px;
+  height: 75px;
+  position: absolute;
+  top: 14.5%;
+  left: 64%;
+}
+.buttonSort{
+  margin-right: 0.5vw;
+}
+.buttonSort2{
+  margin-right: 4px;
+  margin-right: 4px;
+  padding: 8px 10px;
+}
+#sitesList {
+  box-sizing: border-box;
+  background-color: white;
+  padding: 0px;
+  border-style: none solid none solid;
+  width: 55%;
+  height: 70%;
+  position:absolute;
+  top: 18%;
+  left: 45%;
+  overflow: auto;
+}
+#sitesList2 {
+  box-sizing: border-box;
+  padding: 0px;
+  width: 69.2%;
+  height: 76%;
+  position:absolute;
+  top: 24%;
+  left: 10.5%;
+  overflow: auto;
+}
+.site {
+  box-sizing: border-box;
+  margin: 8px;
+  margin-bottom: 0;
+  position:relative;
+}
+.site2 {
+  box-sizing: border-box;
+  margin: 5px;
+  margin-right: 15px;
+  position:relative;
+}
+.basicSite {
+  box-sizing: border-box;
+  background-color: white;
+  padding: 5px;
+  border-style: solid solid none solid;
+  border-width: 2px;
+  border-color: black;
+  font-family: Courier;
+  position:relative;
+}
+.basicSite2 {
+  box-sizing: border-box;
+  background-color: white;
+  padding: 8px;
+  border-style: solid solid solid solid;
+  border-width: 3px;
+  border-color: black;
+  font-family: Courier;
+  position:relative;
+}
+.siteItem {
+    padding: 5px;
+}
+.URL {
+  color: lightgrey;
+}
+#siteButtons {
+  position: absolute;
+  margin: 3px;
+  padding: 0;
+  text-align: right;
+  right: 2px;
+  top: 2px;
+}
+.dropdownButton {
+    box-sizing: border-box;
+    font-family: Courier;
+    position: relative;
+    display: block;
+    padding: 5px;
+    border-style: none solid solid solid;
+    border-width: 2px;
+    border-color: black;
+    height: 37px;
+    overflow: hidden;
+}
+.dropdownButton.is-active {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    padding: 5px;
+    padding-bottom: 8px;
+    border-style: none solid solid solid;
+    border-width: 2px;
+    height: auto;
+    border-color: black;
+} 
+.selected-true {
+  border-style: solid;
+    border-width: 1px;
+}
+.delete-true {
+  opacity: 0.3;
+}
+#deleteSelectedBox {
+  box-sizing: border-box;
+  padding: 3.1vh;
+  border-style: solid none solid solid;
+  width: 35%;
+  height: 12%;
+  position:absolute;
+  top: 88%;
+  left: 45%;
+}
+#totalBox {
+  box-sizing: border-box;
+  padding: 4vh;
+  border-style: solid solid solid solid;
+  width: 20%;
+  height: 12%;
+  position:absolute;
+  top: 88%;
+  left: 80%;
+}
+.button { 
+  border: 2px solid black;
+  padding: 0.8vh 1.2vh;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.addSite {
+  background-color: #ff9933;
+}
+.verified {
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+.verified-yes {
+  background-color: #cfff04;
+} 
+.requestRemove {
+  background-color: #fe019a;
+  border-color: black;
+  color: black;
+}
+.remove-yes {
+  opacity: 0.4;
+}
+.saveChanges {
+  background-color: #cfff04;
+  margin-left: 2vw;
+}
+.clear {
+  background-color: #4efd54;
+}
+.mail {
+  background-color: #cfff04;
+  margin: 1vh;
+}
+.preview {
+  display: block;
+  background-color: white;
+  margin: 1vh;
+}
+.save {
+  display: block;
+  background-color: #cfff04;
+  margin: 1vh;
+}
+.AZ {
+  background-color: #cfff04;
+}
+.DMY{
+  background-color: #ff9933;
+}
+.edit{
+  background-color: #4efd54;
+}
+.remove{
+  background-color: #fe019a;
+}
+.deleteSelected{
+  background-color: #fe019a;
+}
