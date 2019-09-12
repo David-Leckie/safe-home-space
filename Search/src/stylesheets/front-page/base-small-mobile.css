@@ -127,7 +127,7 @@ a:link {
   padding: 0 0 0 0;
   margin: 0 0 0 0;
   background-color: auto;
-  background-image: url("../../assets/black-home-icon.png");
+  background-image: url("../../../assets/black-home-icon.png");
   background-size: 38px 38px;
   color: auto;
   border-style: none none none none;
@@ -135,6 +135,7 @@ a:link {
   border-color: black;
   border-radius: 0;
   text-align: left;
+  cursor: pointer;
   z-index: 0;
 }
 #settingsIcon {
@@ -147,7 +148,7 @@ a:link {
   padding: 0 0 0 0;
   margin: 0 0 0 0;
   background-color: auto;
-  background-image: url("../../assets/black-settings-icon-1.png");
+  background-image: url("../../../assets/black-settings-icon-1.png");
   background-size: 38px 38px;
   color: auto;
   border-style: none none none none;
@@ -155,6 +156,7 @@ a:link {
   border-color: black;
   border-radius: 0px;
   text-align: left;
+  cursor: pointer;
   z-index: 1;
 }
 #addMySiteButton {
@@ -187,7 +189,7 @@ a:link {
   width: 120px;
   height: 120px;
   margin: 0 0 0 -60px;
-  background-image: url('../../assets/safenetwork-icon-pink.png');
+  background-image: url('../../../assets/safenetwork-icon-pink.png');
   background-size: 120px 120px;
 }
 #title {
