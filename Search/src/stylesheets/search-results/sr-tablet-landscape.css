@@ -1,0 +1,81 @@
+.subCategoriesPopUpMenu { 
+left: 50%;  
+bottom: 36px;
+margin: 0 0 0 -75px; 
+}
+.site {
+padding: 7px 7px 10px 20px;
+}
+.lower {
+left: 50%;  
+}
+#fixedElements {
+height: 235px; 
+}
+#homeIcon  {
+left: 15px;
+top:15px;
+width: 44px;
+height: 44px;
+background-size: 44px 44px;
+}
+#settingsIcon  {
+right: 15px;
+top:15px;
+width: 44px;
+height: 44px;
+background-size: 44px 44px;
+}
+#addMySiteButtonSR {
+right: 100px;
+top: 19px;
+width: 130px;
+height: 34px;
+font-size: 15px;
+}
+#titleBox {
+top: 70px;
+}
+#searchBoxWrapperSR {
+top: 16px;
+width: 58%;
+}
+#searchBoxSR {
+width: 83%;
+}
+#sortButtonsWrapper {
+right: 9%;
+top: 163px;
+}
+#sitesList {
+width: 88%;
+top: 235px;
+left: 6%;
+}
+#searchingMessage {   
+height: 170px; 
+padding: 30px 40px 40px 40px;    
+}
+#noSitesToShow {   
+height: 170px; 
+padding: 30px 40px 40px 40px;    
+}
+#noNetworkConnection {   
+height: 170px; 
+padding: 30px 40px 40px 40px;    
+}
+#learnButton {
+left: 10%;
+}
+#workButton {
+left: 27%;
+}
+#playButton {
+left: 44%;
+}
+#connectButton {
+left: 61%;
+}
+#tradeButton {
+left: 78%;
+}

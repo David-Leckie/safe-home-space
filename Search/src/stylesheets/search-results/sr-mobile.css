@@ -1,0 +1,28 @@
+.sort{
+padding: 5px 9px 5px 9px;
+margin-right: 6px;
+font-size: 14px;
+}
+#fixedElements {
+height: 230px; 
+}
+#searchBoxWrapperSR {
+width: 80%;
+margin: 0 0 0 -40%;
+}
+#searchBoxSR {
+width: 70%; 
+}
+#categoryButtonsWrapper {
+width: 160px;
+height: 320px;
+}
+#sortButtonsWrapper {
+width: 135px;
+height: 40px;
+top: 187px;
+right: 2%;
+}
+#sitesList {
+top: 230px;
+}

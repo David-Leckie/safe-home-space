@@ -1,0 +1,123 @@
+.subCategoriesPopUpMenu {   
+bottom: -200px;
+left: -70px;
+width: 200px;
+margin: 0 0 0 -100px; 
+}
+.lower {
+bottom: -160px;
+}
+.subCategoryPopUpMenuItem {
+height: 50px;
+font-size: 20px;
+}
+.site {
+margin: 0px 0px 20px 0px;
+padding: 10px 10px 15px 15px;
+}
+.button {
+width: 150px;
+height: 50px;
+font-size: 20px;
+}
+.sort{
+font-size: 18px;
+width: 80px;
+border-width: 3px;
+}
+.category {
+width:13vw;
+height: 55px;
+padding: 15px 4px;
+font-size: 18px;
+}
+.heading1Size {
+font-size: 42px;
+}
+#fixedElements {
+height: 250px; 
+}
+#fixedElements2 {
+left: 80%;
+top: 200px; 
+height: 450px; 
+width: 20%; 
+background-color: white;
+border-style: none none none none;
+}
+#homeIcon  {
+left: 20px;
+top:20px;
+}
+#settingsIcon  {
+right: 30px;
+top:20px;
+}
+#searchBoxWrapperSR {
+top: 21px;
+}
+#addMySiteButtonSR {
+top: 24px;
+right: 140px;
+}
+#titleBox {
+left: 40%;
+top: 80px;
+width: 350px;
+}
+#safeIcon {
+top: 14px;
+width: 70px;
+height: 70px;
+margin: 0 0px 0 -10px;
+background-size: 70px 70px;
+} 
+#sortButtonsWrapper {
+right: 25%;
+top: 178px;
+}
+#sitesList {
+width: 75%;
+top: 251px;
+left: 4%;
+}
+#categoryButtonsWrapper {
+left: 0%;
+top: 0px;
+width: 20vw;
+height: 450px;
+margin: 0 0 0 0;
+visibility: visible;
+border: none;
+background-color: transparent;
+}
+#learnButton {
+/*display: flex; 
+justify-content: flex-end;*/
+left: 4vw;
+top: 10px;
+}
+#workButton {
+/*display: flex; 
+justify-content: flex-end;*/
+left: 4vw;
+top:90px;
+}
+#playButton {
+/*display: flex; 
+justify-content: flex-end;*/
+left: 4vw;
+top:170px;
+}
+#connectButton {
+/*display: flex; 
+justify-content: flex-end;*/
+left: 4vw;
+top:250px;
+}
+#tradeButton {
+/*display: flex; 
+justify-content: flex-end;*/
+left: 4vw;
+top:330px;
+}

@@ -1,0 +1,56 @@
+.subCategoriesPopUpMenu {   
+width: 220px;
+}
+.site {
+margin: 0px 0px 20px 0px;
+padding: 10px 10px 20px 20px;
+}
+.heading1Size {
+font-size: 48px;
+}
+#homeIcon  {
+width: 48px;
+height: 48px;
+background-size: 48px 48px;
+}
+#settingsIcon  {
+right: 30px;
+top:18px;
+width: 48px;
+height: 48px;
+background-size: 48px 48px;
+}
+#addMySiteButtonSR {
+right: 180px;
+top: 22px;
+width: 160px;
+height: 40px;
+padding: 8px 0px 5px 0;
+border-width: 3px;
+font-size: 16px;
+}
+#searchBoxWrapper {
+width: 60%;
+top: 460px;
+margin: 0 0 0 -30%;
+}
+#titleBox {
+left: 40%;
+top: 90px;
+width: 390px;
+}
+#safeIcon {
+top: 12px;
+width: 80px;
+height: 80px;
+margin: 0 0px 0 -15px;
+background-size: 80px 80px;
+} 
+#sortButtonsWrapper {
+right: 25%;
+top: 178px;
+width: 180px;
+}
+
+
+    

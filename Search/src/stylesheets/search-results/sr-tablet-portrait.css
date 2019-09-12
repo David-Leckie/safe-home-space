@@ -1,0 +1,107 @@
+.subCategoriesPopUpMenu { 
+left: 70%;  
+bottom: 36px;
+width: 150px;
+margin: 0 0 0 -80px; 
+}
+.site {
+padding: 7px 7px 10px 10px;
+}
+.lower {
+left: -50%;  
+margin: 5px 0 0 0px;
+}
+.subCategoryPopUpMenuItem {
+height: 46px;
+font-size: 18px;
+}
+.site {
+border-width: 3px;
+}
+.button {
+width: 15vw;
+height: auto;
+padding: 8px 0px;
+}
+.sort{
+font-size: 18px;
+width: 80px;
+border-width: 3px;
+}
+.category {
+width: 12vw;
+height: 45px;
+padding: 12px 4px;
+border-width: 3px;
+font-size: 16px;
+}
+.heading1Size {
+font-size: 40px;
+}
+#fixedElements {
+height: 205px; 
+}
+#fixedElements2 {
+bottom: 0;  
+height: 90px; 
+width: 100vw; 
+background-color: white;
+border-style: solid none none none;
+}
+#menuIcon {
+visibility:hidden;
+}
+#safeIcon {
+top: 18px;
+}
+#titleBox {
+top: 60px;
+width: 340px;
+margin: 0 0 0 -170px;
+}
+#searchBoxWrapperSR {
+left: 12%;
+top: 12px;
+width: 55%;
+margin: 0 0 0 0;
+}
+#searchBoxSR {
+width: 80%;
+}
+#categoryButtonsWrapper {
+left: 50%;
+top: 25px;
+width: 96%;
+height: 50px;
+margin: 0 0 0 -48%;
+visibility: visible;
+border: none;
+background-color: transparent;
+}
+#sortButtonsWrapper {
+width: 180px;
+top: 153px;
+}
+#learnButton {
+top: 0px;
+left: 2%;
+}
+#workButton {
+top: 0px;
+left: 22%;
+}
+#playButton {
+top: 0px;
+left: 42%;
+}
+#connectButton {
+top: 0px;
+left: 62%;
+}
+#tradeButton {
+top: 0px;
+left: 82%;
+}
+#sitesList {
+top: 205px;
+}
