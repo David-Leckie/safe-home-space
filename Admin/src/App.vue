@@ -37,19 +37,19 @@
         }
       },
       timeout: function(ms) {
-          return new Promise(resolve => setTimeout(resolve, ms));
-          },
+        return new Promise(resolve => setTimeout(resolve, ms));
+      },
       saveTheme: async function(theme) {
         let themeVersion = await safenetwork.getThemeVersion();
-          await safenetwork.updateTheme(theme, themeVersion);
-          let savedMessage = document.getElementById("savedMessage2");
-          savedMessage.className = "show";
-          setTimeout(function(){ savedMessage.className = savedMessage.className.replace("show", ""); },1000);
+        await safenetwork.updateTheme(theme, themeVersion);
+        let savedMessage = document.getElementById("savedMessage2");
+        savedMessage.className = "show";
+        setTimeout(function(){ savedMessage.className = savedMessage.className.replace("show", ""); },1000);
           function timeout(ms) {
           return new Promise(resolve => setTimeout(resolve, ms));
           }
-          await this.timeout(1000);
-          await this.getTheme()
+        await this.timeout(1000);
+        await this.getTheme()
       },
       refreshList: async function() {
         this.sites = await safenetwork.getItems();
@@ -59,20 +59,20 @@
         this.newText = await typing;
       },
       chooseSubCategorySelList: async function(cat) {
-            if (cat == 'Information') {
-              var options = ["All", "SAFE", "Tech", "Science", "Geography", "Society", "Media", "Arts","General"]
-            } else if (cat == 'Tools') {
-              var options = ["All", "Storage", "Computing", "Organisation", "Finance", "Language", "Visual", "Sound", "Other Tools"]
-            } else if (cat == 'All Media') {
-              var options = ["All", "Music", "Video", "Games", "Art", "Words", "Kids", "Other Media"]
-            } else if (cat == 'Social') {
-              var options = ["All", "People", "Mail", "Chat", "Blog", "Forums", "Community", "Other Social"]
-            } else if (cat == 'Trade') {
-              var options = ["All", "Markets", "Retail", "Services", "Local", "Software", "Currency", "Other Trade"]
-            } else {
-              var options = ["-",]
-            }
-            return options;
+        if (cat == 'Information') {
+          var options = ["All", "SAFE", "Tech", "Science", "Geography", "Society", "Media", "Arts","General"]
+        } else if (cat == 'Tools') {
+          var options = ["All", "Storage", "Computing", "Organisation", "Finance", "Language", "Visual", "Sound", "Other Tools"]
+        } else if (cat == 'All Media') {
+          var options = ["All", "Music", "Video", "Games", "Art", "Words", "Kids", "Other Media"]
+        } else if (cat == 'Social') {
+          var options = ["All", "People", "Mail", "Chat", "Blog", "Forums", "Community", "Other Social"]
+        } else if (cat == 'Trade') {
+          var options = ["All", "Markets", "Retail", "Services", "Local", "Software", "Currency", "Other Trade"]
+        } else {
+          var options = ["-",]
+        }
+        return options;
       },
       resetSubCategories1: async function() {
         this.selCat1SubA = "None";
@@ -83,74 +83,74 @@
         this.selCat2SubB = "None"
       },
       chooseSelectSubCategory1AList: async function(selCat1) {
-          let subCat1ASelList = document.getElementById("subCategory1ASelectList");
-          subCat1ASelList.innerHTML = '';
-            var options = await this.chooseSubCategorySelList(selCat1);
-          for(var i = 0; i < options.length; i++) {
-           var catName = options[i];
-            var categoryA = document.createElement("option");
-            if (catName == "") {
+        let subCat1ASelList = document.getElementById("subCategory1ASelectList");
+        subCat1ASelList.innerHTML = '';
+        var options = await this.chooseSubCategorySelList(selCat1);
+        for (var i = 0; i < options.length; i++) {
+          var catName = options[i];
+          var categoryA = document.createElement("option");
+          if (catName == "") {
               categoryA.value = "None";
-            }
-            else {
+          }
+          else {
             categoryA.textContent = catName;
             categoryA.value = catName;
-            }
-          subCat1ASelList.appendChild(categoryA);
           }
-          await this.chooseSelectSubCategory1BList(selCat1);
+          subCat1ASelList.appendChild(categoryA);
+        }
+        await this.chooseSelectSubCategory1BList(selCat1);
       },
       chooseSelectSubCategory1BList: async function(selCat1) {
-          let subCat1BSelList = document.getElementById("subCategory1BSelectList");
-          subCat1BSelList.innerHTML = '';
-            var options = await this.chooseSubCategorySelList(selCat1);
-          for(var i = 0; i < options.length; i++) {
-           var catName = options[i];
-            var categoryB = document.createElement("option");
-            if (catName == "") {
+        let subCat1BSelList = document.getElementById("subCategory1BSelectList");
+        subCat1BSelList.innerHTML = '';
+        var options = await this.chooseSubCategorySelList(selCat1);
+        for (var i = 0; i < options.length; i++) {
+          var catName = options[i];
+          var categoryB = document.createElement("option");
+          if (catName == "") {
               categoryB.value = "None";
-            }
-            else {
+          }
+          else {
             categoryB.textContent = catName;
             categoryB.value = catName;
-            }
-          subCat1BSelList.appendChild(categoryB);
           }
+          subCat1BSelList.appendChild(categoryB);
+        }
       },
       chooseSelectSubCategory2AList: async function(selCat2) {
-          let subCat2ASelList = document.getElementById("subCategory2ASelectList");
-          subCat2ASelList.innerHTML = '';
-            var options = await this.chooseSubCategorySelList(selCat2);
-          for(var i = 0; i < options.length; i++) {
-           var catName = options[i];
-            var categoryA = document.createElement("option");
-            if (catName == "") {
+        let subCat2ASelList = document.getElementById("subCategory2ASelectList");
+        subCat2ASelList.innerHTML = '';
+        var options = await this.chooseSubCategorySelList(selCat2);
+        for (var i = 0; i < options.length; i++) {
+          var catName = options[i];
+          var categoryA = document.createElement("option");
+          if (catName == "") {
               categoryA.value = "None";
             }
-            else {
+          else {
             categoryA.textContent = catName;
             categoryA.value = catName;
-            }
-          subCat2ASelList.appendChild(categoryA);
           }
-          await this.chooseSelectSubCategory2BList(selCat2);
+          subCat2ASelList.appendChild(categoryA);
+        }
+        await this.chooseSelectSubCategory2BList(selCat2);
       },
       chooseSelectSubCategory2BList: async function(selCat2) {
-          let subCat2BSelList = document.getElementById("subCategory2BSelectList");
-          subCat2BSelList.innerHTML = '';
-            var options = await this.chooseSubCategorySelList(selCat2);
-          for(var i = 0; i < options.length; i++) {
-           var catName = options[i];
-            var categoryB = document.createElement("option");
-            if (catName == "") {
+        let subCat2BSelList = document.getElementById("subCategory2BSelectList");
+        subCat2BSelList.innerHTML = '';
+        var options = await this.chooseSubCategorySelList(selCat2);
+        for (var i = 0; i < options.length; i++) {
+          var catName = options[i];
+          var categoryB = document.createElement("option");
+          if (catName == "") {
               categoryB.value = "None";
-            }
-            else {
+          }
+          else {
             categoryB.textContent = catName;
             categoryB.value = catName;
-            }
-          subCat2BSelList.appendChild(categoryB);
           }
+          subCat2BSelList.appendChild(categoryB);
+        }
       },
       verifySite: async function(verified) {
         if (verified =='Yes') {
@@ -164,25 +164,24 @@
         else {
           this.verified = 'No';
           this.verifiedIndicator = false
-        } 
-          
+        }    
       },
       addSite: async function() {
         //const randomNumber = Math.floor((Math.random() * 10000) + 1);
         //const randomKey = randomNumber.toString();
         try {
-        const randomKey = this.urlText;
-        await this.ifEmptyAddNone();
-        await safenetwork.insertItem(randomKey, {name: this.nameText, url: this.urlText, description: this.descriptionText,
-        keywords: this.keywordsText,
-        category1: this.selCat1, category1SubCategoryA: this.selCat1SubA, category1SubCategoryB: this.selCat1SubB,
-        category2: this.selCat2, category2SubCategoryA: this.selCat2SubA, category2SubCategoryB: this.selCat2SubB,
-        dateAdded: Date(), dateUpdated: Date(), delete: false, verified: 'No', requestRemove: 'No'});
-        let savedMessage = document.getElementById("savedMessage");
+          const randomKey = this.urlText;
+          await this.ifEmptyAddNone();
+          await safenetwork.insertItem(randomKey, {name: this.nameText, url: this.urlText, description: this.descriptionText,
+          keywords: this.keywordsText,
+          category1: this.selCat1, category1SubCategoryA: this.selCat1SubA, category1SubCategoryB: this.selCat1SubB,
+          category2: this.selCat2, category2SubCategoryA: this.selCat2SubA, category2SubCategoryB: this.selCat2SubB,
+          dateAdded: Date(), dateUpdated: Date(), delete: false, verified: 'No', requestRemove: 'No'});
+          let savedMessage = document.getElementById("savedMessage");
           savedMessage.className = "show";
-          setTimeout(function(){ savedMessage.className = savedMessage.className.replace("show", ""); },1400);
-        this.newText = [];
-        this.radioKey = this.urlText;
+          setTimeout (function() { savedMessage.className = savedMessage.className.replace("show", ""); },1400);
+          this.newText = [];
+          this.radioKey = this.urlText;
         }
         catch (err) {
           alert ("Error!\n\nTry checking the URL.\n\nDuplicate entries not allowed.\n")
@@ -259,88 +258,88 @@
         else {
           await this.emptyAll();
         }
-          let waitCat1 = await this.selCat1;
-          await this.chooseSelectSubCategory1AList(waitCat1);
-          await this.chooseSelectSubCategory1AList(waitCat1);
-          let waitCat2 = await this.selCat2;
-          await this.chooseSelectSubCategory2AList(waitCat2);
-          await this.chooseSelectSubCategory2AList(waitCat2);
+        let waitCat1 = await this.selCat1;
+        await this.chooseSelectSubCategory1AList(waitCat1);
+        await this.chooseSelectSubCategory1AList(waitCat1);
+        let waitCat2 = await this.selCat2;
+        await this.chooseSelectSubCategory2AList(waitCat2);
+        await this.chooseSelectSubCategory2AList(waitCat2);
       },
       emptyAll: async function() {
-          this.radioKey = '';
-          this.nameText = '';
-          this.urlText = '';
-          this.descriptionText = '';
-          this.keywordsText = '';
-          this.selCat1 = '';
-          this.selCat1SubA = '';
-          this.selCat1SubB = '';
-          this.selCat2 = '';
-          this.selCat2SubA = '';
-          this.selCat2SubB = '';
+        this.radioKey = '';
+        this.nameText = '';
+        this.urlText = '';
+        this.descriptionText = '';
+        this.keywordsText = '';
+        this.selCat1 = '';
+        this.selCat1SubA = '';
+        this.selCat1SubB = '';
+        this.selCat2 = '';
+        this.selCat2SubA = '';
+        this.selCat2SubB = '';
       },
       filterByCategory: async function(filCat, caller) {
-        {
-          if (caller == 'filCat') {
-            this.verSel = 'default'
-            }
+        if (caller == 'filCat') {
+          this.verSel = 'default'
         };
         let ufsites = await safenetwork.getItems();
-          if (filCat == "All" || filCat == "" || filCat == null || filCat == "Category") {
-            this.sites = ufsites;
-          }
-          else {
+        if (filCat == "All" || filCat == "" || filCat == null || filCat == "Category") {
+          this.sites = ufsites;
+        }
+        else {
           this.sites = await ufsites.filter(ufsite => (ufsite.value.category1 == filCat || ufsite.value.category2 == filCat));
-          };
+        };
         await this.chooseFilterSubCategoryList(filCat);
         return this.sites;
       },
       chooseFilterSubCategoryList: async function(filCat) {
-          let subCatFilList = document.getElementById("subCategoryFilterList");
-          subCatFilList.innerHTML = '';
-            let options = await this.filSubCatList(filCat);
-          for(var i = 0; i < options.length; i++) {
-           var catName = options[i];
-            var category = document.createElement("option");
-            category.textContent = catName;
-            category.value = catName;
+        let subCatFilList = document.getElementById("subCategoryFilterList");
+        subCatFilList.innerHTML = '';
+        let options = await this.filSubCatList(filCat);
+        for (var i = 0; i < options.length; i++) {
+          var catName = options[i];
+          var category = document.createElement("option");
+          category.textContent = catName;
+          category.value = catName;
           subCatFilList.appendChild(category);
-          }
+        }
       },
       filSubCatList: async function(filCat) {
-          if (filCat == 'All') {
-              var options = ["-"]
-            } else if (filCat == 'Information') {
-              var options = ["All", "SAFE", "Tech", "Science", "Geography", "Society", "Media", "Arts","Other"]
-            } else if (filCat == 'Tools') {
-              var options = ["All", "Storage", "Computing", "Organisation", "Finance", "Language", "Visual", "Sound", "Other Tools"]
-            } else if (filCat == 'All Media') {
-              var options = ["All", "Music", "Video", "Games", "Art", "Words", "Kids", "Other Media"]
-            } else if (filCat == 'Social') {
-              var options = ["All", "People", "Mail", "Chat", "Blog", "Forums", "Community", "Other Social"]
-            } else if (filCat == 'Trade') {
-              var options = ["All", "Markets", "Retail", "Services", "Local", "Software", "Currency", "Other Social"]
-            } else {
-              var options = ["Sub Category",]
-            };
-          return options;
+        if (filCat == 'All') {
+          var options = ["-"]
+        } else if (filCat == 'Information') {
+          var options = ["All", "SAFE", "Tech", "Science", "Geography", "Society", "Media", "Arts","General"]
+        } else if (filCat == 'Tools') {
+          var options = ["All", "Storage", "Computing", "Organisation", "Finance", "Language", "Visual", "Sound", "Other Tools"]
+        } else if (filCat == 'All Media') {
+          var options = ["All", "Music", "Video", "Games", "Art", "Words", "Kids", "Other Media"]
+        } else if (filCat == 'Social') {
+          var options = ["All", "People", "Mail", "Chat", "Blog", "Forums", "Community", "Other Social"]
+        } else if (filCat == 'Trade') {
+          var options = ["All", "Markets", "Retail", "Services", "Local", "Software", "Currency", "Other Trade"]
+        } else {
+          var options = ["Sub Category",]
+        };
+        return options;
       },
       filSubCatOnLoad: async function () {
         this.filSubCat = "Sub Category"
       },
       filterBySubCategory: async function(filSubCat, caller) {
-        {if (caller == 'filCat') {this.verSel = 'default'}};
+        if (caller == 'filCat') {
+          this.verSel = 'default'
+        };
         let ufsites = await this.filterByCategory(this.filCat);
         if (filSubCat == "All" || filSubCat == "" || filSubCat == "None" || filSubCat == null || filSubCat == "Sub Category") {
           this.sites = ufsites;
         }
         else {
-        this.sites = await ufsites.filter(ufsite => 
-        ufsite.value.category1SubCategoryA == filSubCat ||
-        ufsite.value.category1SubCategoryB == filSubCat ||
-        ufsite.value.category2SubCategoryA == filSubCat ||
-        ufsite.value.category2SubCategoryB == filSubCat
-        );
+          this.sites = await ufsites.filter (ufsite => 
+          ufsite.value.category1SubCategoryA == filSubCat ||
+          ufsite.value.category1SubCategoryB == filSubCat ||
+          ufsite.value.category2SubCategoryA == filSubCat ||
+          ufsite.value.category2SubCategoryB == filSubCat
+          );
         } 
         return this.sites;
       },
@@ -348,22 +347,19 @@
         this.verSel = "default"
       },
       filterByVerified: async function(verSel) {
-       let ufsites = await this.filterBySubCategory(this.filSubCat)
+        let ufsites = await this.filterBySubCategory(this.filSubCat)
         if (verSel == "All" || verSel == "") {
           this.sites = ufsites;
         }
         else if (verSel == "Verified") {
-                  this.sites = await ufsites.filter(ufsite => 
-                  ufsite.value.verified == "Yes");
-                }
+          this.sites = await ufsites.filter (ufsite => ufsite.value.verified == "Yes");
+        }
         else if (verSel == "Unverified") {
-                  this.sites = await ufsites.filter(ufsite => 
-                  ufsite.value.verified == "No");
-                }
+          this.sites = await ufsites.filter (ufsite => ufsite.value.verified == "No");
+        }
         else if (verSel == "To Remove") {
-                  this.sites = await ufsites.filter(ufsite => 
-                  ufsite.value.requestRemove == 'Yes');
-                }        
+          this.sites = await ufsites.filter (ufsite => ufsite.value.requestRemove == 'Yes');
+        }        
       },
       showSettingsDropdown: async function() {
         document.getElementById("settingsDropdown").classList.toggle("show");
@@ -384,81 +380,79 @@
         }
       },
       alphabetSort: async function(sites) {
-          this.sites.sort((a, b) => a.value.name.localeCompare(b.value.name))
+        this.sites.sort((a, b) => a.value.name.localeCompare(b.value.name))
       },
       dateAddedSort: async function(sites) {
-          await sites.sort((a, b) => a.value.dateAdded.localeCompare(b.value.dateAdded)),
-          await sites.reverse()
+        await sites.sort((a, b) => a.value.dateAdded.localeCompare(b.value.dateAdded)),
+        await sites.reverse()
       },
       selectSite: async function(radioSite) {
         if (this.radioKey == radioSite.key) {
           return
         }
         else {
-        if (this.newText == true) {
-          if (confirm("Discard Changes?") == true) {
-            await this.parcelSelectedSite(radioSite);
+          if (this.newText == true) {
+            if (confirm("Discard Changes?") == true) {
+              await this.parcelSelectedSite(radioSite);
+            }
+            else {
+              return;
+            }  
           }
           else {
-            return;
-          }  
-        }
-        else {
-          await this.parcelSelectedSite(radioSite); 
-        }
+            await this.parcelSelectedSite(radioSite); 
+          }
         }
         this.newText = false;
       },
       parcelSelectedSite: async function(radioSite) {
-          
-          this.nameText = await radioSite.value.name;
-          this.urlText = await radioSite.value.url;
-          this.descriptionText = await radioSite.value.description;
-          this.keywordsText = await radioSite.value.keywords;
-          this.selCat1 = await radioSite.value.category1;
-            let waitCat1 = await this.selCat1;
-            await this.chooseSelectSubCategory1AList(waitCat1);
-            await this.chooseSelectSubCategory1BList(waitCat1);
-            this.selCat1SubA = await radioSite.value.category1SubCategoryA;
-            this.selCat1SubB = await radioSite.value.category1SubCategoryB;
-          this.selCat2 = await radioSite.value.category2;
-          
-          await this.chooseSelectSubCategory2AList(this.selCat2);
-          await this.chooseSelectSubCategory2BList(this.selCat2);
-          this.selCat2SubA = await radioSite.value.category2SubCategoryA;
-          this.selCat2SubB = await radioSite.value.category2SubCategoryB; 
-          this.dateAdded = await radioSite.value.dateAdded;
-          this.verified = await radioSite.value.verified;
-          if (this.verified == 'Yes') {
-            this.verifiedIndicator = true
-          }
-          else if (this.verified == 'No') {
-            this.verifiedIndicator = false
-          };
-          this.requestRemove = await radioSite.value.requestRemove;
-          if (this.requestRemove == 'Yes') {
-            this.requestRemoveIndicator = true
-          }
-          else if (this.requestRemove == 'No') {
-            this.requestRemoveIndicator = false
-          }
-          this.radioKey = await radioSite.key;
+        this.nameText = await radioSite.value.name;
+        this.urlText = await radioSite.value.url;
+        this.descriptionText = await radioSite.value.description;
+        this.keywordsText = await radioSite.value.keywords;
+        this.selCat1 = await radioSite.value.category1;
+        let waitCat1 = await this.selCat1;
+        await this.chooseSelectSubCategory1AList(waitCat1);
+        await this.chooseSelectSubCategory1BList(waitCat1);
+        this.selCat1SubA = await radioSite.value.category1SubCategoryA;
+        this.selCat1SubB = await radioSite.value.category1SubCategoryB;
+        this.selCat2 = await radioSite.value.category2;
+        await this.chooseSelectSubCategory2AList(this.selCat2);
+        await this.chooseSelectSubCategory2BList(this.selCat2);
+        this.selCat2SubA = await radioSite.value.category2SubCategoryA;
+        this.selCat2SubB = await radioSite.value.category2SubCategoryB; 
+        this.dateAdded = await radioSite.value.dateAdded;
+        this.verified = await radioSite.value.verified;
+        if (this.verified == 'Yes') {
+          this.verifiedIndicator = true
+        }
+        else if (this.verified == 'No') {
+          this.verifiedIndicator = false
+        };
+        this.requestRemove = await radioSite.value.requestRemove;
+        if (this.requestRemove == 'Yes') {
+          this.requestRemoveIndicator = true
+        }
+        else if (this.requestRemove == 'No') {
+          this.requestRemoveIndicator = false
+        }
+        this.radioKey = await radioSite.key;
       },
       highlightSelected: async function(key) {
-        let site = this.sites.find(e => e.key === key)
-        let sites = this.sites.map(e => Vue.set(e, 'active', false))
+        let site = this.sites.find (e => e.key === key)
+        let sites = this.sites.map (e => Vue.set(e, 'active', false))
         Vue.set(site, 'active', !site.active)
       },
       toggleSiteDropdown(event) {
         event.currentTarget.classList.toggle('is-active');
       },
       formatDateAdded: function(date) {
-          let dateOnly = moment(date).format('DD/M/YYYY');
-          return dateOnly;
+        let dateOnly = moment(date).format('DD/M/YYYY');
+        return dateOnly;
       },
       formatDateUpdated: function(date) {
-          let dateAndTime = moment(date).format('Do MMMM YYYY h:mm a');
-          return dateAndTime;
+        let dateAndTime = moment(date).format('Do MMMM YYYY h:mm a');
+        return dateAndTime;
       },
       remaining: function() {
         var count = 0;
@@ -503,7 +497,7 @@
 
 <style scoped>
 {
-@import './neon.css';
+  @import './main-admin.css';
 }
 </style>
 
@@ -648,7 +642,7 @@
       <div class="settingsItem" style="padding-top: 3vh; height: 30px; width: 130px; margin: 2vh;"><b>Saved</b></div>
     </div>
         <div id="mailIcon">
-          <a @click="mailVisible = !mailVisible" ref="mailDropdown"><img src="./assets/black-mail-icon-1.png" width="55"></a>
+          <a @click="mailVisible = !mailVisible" ref="mailDropdown"><img src="../assets/black-mail-icon-1.png" width="55"></a>
           <div id="mailDropdown" v-if="mailVisible" class="mailDropdown">
             <div id="innerMailDropdown" class="mailItem">
               <p>This Index is administered by David.</p>
@@ -668,7 +662,7 @@
         </div>
         
         <div id="settingsIcon">
-          <a @click="settingsVisible = !settingsVisible" ref="settingsDropdown"><img src="./assets/black-settings-icon-1.png" width="30"></a>
+          <a @click="settingsVisible = !settingsVisible" ref="settingsDropdown"><img src="../assets/black-settings-icon-1.png" width="30"></a>
           <div id="settingsDropdown" v-if="settingsVisible" class="settingsDropdown">
             <div class="settingsItem">
               <div style="position: absolute; top: 40%"><b>Neon</b>
