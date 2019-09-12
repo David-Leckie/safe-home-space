@@ -9,7 +9,7 @@
       filCat: '', filSubCat: '', selCat1: '', selCat1SubA: '', selCat1SubB: '',
       selCat2: '', selCat2SubA: '', selCat2SubB: '', verified: '', requestRemove: '', verSel: '', 
       mailVisible: false, settingsVisible: false, theme: 'neon', verifiedIndicator: false,
-      requestRemoveIndicator: false, ufsites: [], radioSite: [], verified: 'No', chosenSite: [], chosenSite: [], 
+      requestRemoveIndicator: false, ufsites: [], radioSite: [], verified: '', chosenSite: [], chosenSite: [], 
       neon: 'neon', dark: 'dark', ocean: 'ocean', radioKey: [], nameAndTag: [], requestRemoveButton: 'Request Remove Site'}
     },
     methods: {
@@ -43,7 +43,10 @@
           return new Promise(resolve => setTimeout(resolve, ms));
           },
       settingsAlert: async function() {
-          alert("Custom Themes Coming Soon!")
+          alert ("Custom Themes Coming Soon!")
+      },
+      mailAlert: async function() {
+          alert ("Index Administered by David:\n\n\nGet in touch...\n\nOn the Safe Network Forum:\n\n@David-Beinn\n\n\nOr Github:\n\n@David-Leckie\n")
       },
       textChange: async function(typing) {
         this.newText = await typing;
@@ -187,15 +190,15 @@
           keywords: this.keywordsText,
           category1: this.selCat1, category1SubCategoryA: this.selCat1SubA, category1SubCategoryB: this.selCat1SubB,
           category2: this.selCat2, category2SubCategoryA: this.selCat2SubA, category2SubCategoryB: this.selCat2SubB,
-          dateAdded: this.dateAdded, dateUpdated: Date(), delete: false, verified: 'No', requestRemove:
-          this.requestRemove}, this.selectedVersion);
+          dateAdded: this.dateAdded, dateUpdated: Date(), delete: false, verified: this.verified, 
+          requestRemove: this.requestRemove}, this.selectedVersion);
           let savedMessage = document.getElementById("savedMessage");
           savedMessage.className = "show";
           setTimeout(function(){ savedMessage.className = savedMessage.className.replace("show", ""); },1000);
           this.newText = [];
         }
         catch (err) {
-          alert ("No Site Selected!\n\nAdd New Site or Select From List...\n")
+          alert ("Edit Unsuccessful...\n\nAdd New Site or Check URL...\n")
         }
       },
       ifEmptyAddNone: async function() {
@@ -307,20 +310,9 @@
         }
         catch(err) {
           await this.emptyAll();
-          alert('No Records for This Location.\n\nIs this Your Address?\n\nAdd a New Entry in the Index!')
+          alert('No Records for This Location.\n\nIs this Your Address?\n\nAdd Your Site to the Index!')
         }
       },
-      showMailDropdown: async function() {
-        document.getElementById("mailDropdown").classList.toggle("show");
-      },
-      documentClick(e) {
-        let el = this.$refs.mailDropdown
-        let target = e.target
-        if ( el !== (target) && !el.contains(target)) {
-          this.mailVisible = false
-        }
-      },
-      
     },
     async created() {
       await this.loadTheme(this.theme);
@@ -338,7 +330,7 @@
 <style scoped>
 
 {
-@import './stylesheets/main-stylesheet.css';
+@import './stylesheets/main-editor/main-editor-stylesheet.css';
 }
 
 </style>
@@ -347,27 +339,10 @@
   <body>
     <div id="mainDiv">
       <div id="savedMessage" ><b>Saved</b></div>
-      <div id="homeIcon">
-        <a href="***LINK TO SEARCH PAGE HOME***"></a>
-      </div>
-      <div id="mailIcon">
-        <a @click="mailVisible = !mailVisible" ref="mailDropdown"></a>
-        <div id="mailDropdown" v-if="mailVisible">
-          <div id="innerMailDropdown" class="mailItem">
-            <p>Index administered by David.</p>
-            <br>
-            <p>For Queries please get in touch...</p>
-            <br>
-            <br>
-            <br>
-            <p><span class="button mail">SAFE Mail</span></p>
-            <br>
-            <br>
-            <br>
-            <p>Or <span class="button mail">Patter</span></p>
-            <br>
-          </div>
-        </div>
+      <a href="safe://safe.search">
+      <div id="homeIcon"></div>
+      </a>
+      <div id="mailIcon" @click.prevent="mailAlert()"> 
       </div>
       <div id="settingsIcon" @click.prevent="settingsAlert()">
       </div>
