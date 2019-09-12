@@ -1,0 +1,17 @@
+#searchAndClearBtns {
+  left: 46%;
+}
+.addSite {
+  padding: 1.2vh 1.8vh 1.2vh 1.8vh;
+  width: 140px;
+  margin: 0 0 0 2vw;
+} 
+.saveChanges {
+  width: 140px;
+  padding: 1.2vh 1.8vh 1.2vh 1.8vh;
+  margin: 0 0 0 2vw;
+}
+#mainEditBoxLower {
+  left: 5%;
+  width: 90%; 
+}
