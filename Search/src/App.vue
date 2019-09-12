@@ -24,9 +24,9 @@ export default {
 
 <style scoped>
 {
-@import './stylesheets/front-page/front-page.css';
+@import './stylesheets/front-page/main-front-page.css';
 }
 {
-@import './stylesheets/search-results/neonbaseSR.css';
+@import './stylesheets/search-results/main-search-results.css';
 }
 </style>
