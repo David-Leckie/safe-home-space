@@ -14,19 +14,15 @@ export default new Router({
       name: 'Home',
       component: Home
     },
-    {
+    /*{
       path: '/home',
       name: 'Home',
       component: Home
-    },
+    },*/
     {
       path: '/search-results/:passedText,:passedCat',  
       name: 'search-results-page',
       component: searchResultsPage,
     },
-    
-
   ]
 })
-
-//:passedText,:passedCat',
